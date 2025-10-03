@@ -1,6 +1,7 @@
 import bibliotheque
 import exceptions
 import models
+import tpanalyse
 
 repertoire = bibliotheque.BibliothequeAvecFichiers("Bibliothèque")
 
@@ -15,8 +16,12 @@ repertoire.ajout_livre(livre2)
 
 repertoire.rechercher()
 
+print(tpanalyse.mentions_ab)
+print(tpanalyse.mentions_b)
+
 repertoire.exporter_csv()
 repertoire.export_json()
 
-erreurFichiers = exceptions.ErreurBibliotheque()
-erreurFichiers.testFichier()
+erreurs = exceptions.ErreurBibliotheque()
+erreurs.testFichier()
+

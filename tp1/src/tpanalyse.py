@@ -47,8 +47,7 @@ etudiants_sorted = sorted(etudiants, key = lambda x:["note"], reverse = True)
 
 # voir fichier correction
 
-print(mentions_ab)
-print(mentions_b)
+
 
 ####################
 
