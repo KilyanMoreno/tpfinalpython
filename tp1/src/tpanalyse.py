@@ -43,7 +43,7 @@ def calcul_mention(note):
             return mention
         
 etudiants_sorted = sorted(etudiants, key = lambda x:["note"], reverse = True)
-mentions = (etudiant["nom"]: calcul_mention(etudiant["note"]) for etudiant in etudiants_sorted))
+# mentions = (etudiant["nom"]: calcul_mention(etudiant["note"]) for etudiant in etudiants_sorted))
 
 # voir fichier correction
 
