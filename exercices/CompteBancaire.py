@@ -1,4 +1,6 @@
-class CompteCancaire:
+import tp1.src.models
+
+class CompteBancaire:
     def __init__(self, titulaire: str, solde_initial: float = 0):
         self.titulaire = "kilyan"
         self.solde_initial = 0
@@ -20,7 +22,7 @@ class CompteCancaire:
         pass
 
 
-compte = CompteCancaire("Kilyan", 0)
+compte = CompteBancaire("Kilyan", 0)
 
 compte.deposer(500)
 compte.retirer (200)

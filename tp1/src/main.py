@@ -1,9 +1,8 @@
-import bibliotheque
+import src.file_manager as file_manager
 import exceptions
-import models
-import tpanalyse
+from src import models
 
-repertoire = bibliotheque.BibliothequeAvecFichiers("Bibliothèque")
+repertoire = file_manager.BibliothequeAvecFichiers("Bibliothèque")
 
 
 #########################################################   EXECUTION DES FONCTIONS ################################################################
@@ -15,8 +14,6 @@ repertoire.ajout_livre(livre1)
 repertoire.ajout_livre(livre2)
 repertoire.rechercher()
 
-print(tpanalyse.mentions_ab)
-print(tpanalyse.mentions_b)
 
 repertoire.exporter_csv()
 repertoire.export_json()

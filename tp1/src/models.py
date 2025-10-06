@@ -17,17 +17,16 @@ class Bibliotheque:
         self.nom = nom
         self.liste_livres = []
     
-    def ajout_livre (self, livre):
+    def ajout_livre(self, livre):
         self.liste_livres.append(livre)
 
-    def rechercher (self):
+    def rechercher(self, ISBN: str):
         liste_resultat = []
         for i in self.liste_livres:
-            if i.ISBN == "843-484":
+            if i.ISBN == ISBN:
                 print(i)
                 liste_resultat.append(i)
-        for livre in liste_resultat:
-            print(f"titre : {livre.titre}, auteur : {livre.auteur}, ISBN : {livre.ISBN}, taille : {livre.taille}ko")
-   
+        return liste_resultat
 
-
+    def __len__(self):
+        return len(self.liste_livres)
