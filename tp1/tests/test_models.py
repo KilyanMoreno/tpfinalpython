@@ -22,3 +22,7 @@ def tester_add_livre_num(biblioVide, livre_num_py):
 def test_exportfichiers(export_folders, list_dict_books):
     with open('./docs/data.json', 'w') as f:
         json.dump(list_dict_books, f, indent=2)
+
+def test_csv(export_csv, list_dict_books):
+    with open('./docs/output.csv', 'w') as f:
+        json.dump(list_dict_books, f, indent=2)

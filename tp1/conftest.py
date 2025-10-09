@@ -52,3 +52,7 @@ def list_dict_books():
         {"titre": "Livre A", "auteur": "Auteur X"},
         {"titre": "Livre B", "auteur": "Auteur Y"}
     ]
+
+@pytest.fixture
+def export_csv():
+        return BibliothequeAvecFichiers("Biblio")

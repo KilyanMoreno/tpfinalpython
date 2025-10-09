@@ -17,7 +17,7 @@ repertoire.ajout_livre(livre1)
 repertoire.ajout_livre(livre2)
 repertoire.rechercher("884-445")
 
-
+ 
 repertoire.exporter_csv()
 repertoire.export_json()
 
