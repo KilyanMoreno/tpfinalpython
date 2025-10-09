@@ -1,6 +1,9 @@
+import sys, os
+# Ajoute la racine du projet au path pour pytest
+sys.path.append(os.path.dirname(__file__))
 import pytest
-from src.models import Bibliotheque, Livre, LivreNumerique
-
+from tp1.src.models import Bibliotheque, Livre, LivreNumerique
+from tp1.src.file_manager import BibliothequeAvecFichiers
 
 @pytest.fixture
 def bibliotheque_vide():
@@ -38,3 +41,14 @@ def livre_py():
 @pytest.fixture
 def livre_num_py():
         return LivreNumerique('Test2', "testt", "542-651", 52)
+
+@pytest.fixture
+def export_folders():
+        return BibliothequeAvecFichiers("Biblio")
+
+@pytest.fixture
+def list_dict_books():
+    return [
+        {"titre": "Livre A", "auteur": "Auteur X"},
+        {"titre": "Livre B", "auteur": "Auteur Y"}
+    ]

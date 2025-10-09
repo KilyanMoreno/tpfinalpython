@@ -1,14 +1,10 @@
 [
   {
-    "titre": "Le labyrinthe",
-    "auteur": "je sais pu",
-    "ISBN": "243-415",
-    "taille": 20
+    "titre": "Livre A",
+    "auteur": "Auteur X"
   },
   {
-    "titre": "Rainbow Six",
-    "auteur": "Tom Clancy",
-    "ISBN": "843-484",
-    "taille": 50
+    "titre": "Livre B",
+    "auteur": "Auteur Y"
   }
 ]

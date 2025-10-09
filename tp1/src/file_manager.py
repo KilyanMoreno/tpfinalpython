@@ -1,12 +1,17 @@
 import pickle
 import csv
 import json
-import models
+from src import models
 
 
 class BibliothequeAvecFichiers(models.Bibliotheque):
-    def exporter_csv (self):
+    def __init__(self, nom):
+        super().__init__(nom)
+        self.nom = nom
+        self.liste_livres = []
         self.list_dict_books = []
+
+    def exporter_csv (self):
         
         for livre in self.liste_livres:
             self.list_dict_books.append({
@@ -17,7 +22,7 @@ class BibliothequeAvecFichiers(models.Bibliotheque):
             }) 
             print(self.list_dict_books)
         
-        with open('./tp1/docs/output.csv', 'w', newline='',
+        with open('./docs/output.csv', 'w', newline='',
             encoding='utf-8') as file:
             writer = csv.DictWriter(file,
             fieldnames=['titre', 'auteur', "ISBN", "taille"])
@@ -28,10 +33,10 @@ class BibliothequeAvecFichiers(models.Bibliotheque):
 
     def export_json(self):
 
-        with open('./tp1/docs/data.json', 'w') as f:
+        with open('./docs/data.json', 'w') as f:
             json.dump(self.list_dict_books, f, indent=2)
 
-        with open('./tp1/docs/data.json', 'r') as f:
+        with open('./docs/data.json', 'r') as f:
             self.list_dict_books = json.load(f)
 
 
